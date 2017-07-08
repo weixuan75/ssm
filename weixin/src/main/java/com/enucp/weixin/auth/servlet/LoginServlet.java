@@ -14,7 +14,7 @@ import java.net.URLEncoder;
 public class LoginServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String redirectURI = "http%3a%2f%2fycttcn.com%3a8080%2fweixin%2fcallback";
+        String redirectURI = "http://ycttcn.com/weixin/callback";
         String url = "https://open.weixin.qq.com/connect/oauth2/authorize" +
                 "?appid=" + AuthUtil.APPID+
                 "&redirect_uri=" + URLEncoder.encode(redirectURI,"utf-8")+
