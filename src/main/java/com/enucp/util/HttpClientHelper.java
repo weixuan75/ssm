@@ -7,7 +7,6 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -37,7 +36,7 @@ public class HttpClientHelper {
      * @param charset
      * @return
      */
-    public static String sendPost(String urlParam, Map<String, Object> params, String charset) {
+    public static String sendPost(String urlParam, Map<String,Object> params, String charset) {
         StringBuffer resultBuffer = null;
         // 构建请求参数
         StringBuffer sbParams = new StringBuffer();
@@ -691,5 +690,4 @@ public class HttpClientHelper {
         }
         return new String(resutlBytes, charset);
     }
-
 }
